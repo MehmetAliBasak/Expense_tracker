@@ -1,2 +1,29 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Dart dosyalarını Dart dili olarak algıla
+*.dart linguist-language=Dart
+
+# CMake ve diğer gereksiz dosyaları analizden çıkar
+CMakeLists.txt linguist-detectable=false
+*.cmake linguist-detectable=false
+
+# Diğer dilleri analizden çıkar
+*.cpp linguist-detectable=false
+*.h linguist-detectable=false
+*.c linguist-detectable=false
+*.cc linguist-detectable=false
+*.hpp linguist-detectable=false
+*.java linguist-detectable=false
+*.js linguist-detectable=false
+*.ts linguist-detectable=false
+*.py linguist-detectable=false
+*.yaml linguist-detectable=false
+*.yml linguist-detectable=false
+
+# Derleme ve bağımlılık dizinlerini analizden çıkar
+build/* linguist-vendored
+third_party/* linguist-vendored
+ios/* linguist-vendored
+android/* linguist-vendored
+web/* linguist-vendored
